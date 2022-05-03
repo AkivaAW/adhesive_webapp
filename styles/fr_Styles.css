@@ -1,0 +1,672 @@
+
+/* 
+    Created on : Oct. 26, 2021, 11:24:20 a.m.
+    Author     : Akiva
+*/
+
+@font-face {
+            font-family: DinMedium;
+            src: url("DIN Medium Regular.ttf");
+        }
+
+        *{
+            font-family: DinMedium;
+        }
+
+        head{
+            margin: 0;
+            height: 0px;
+            display: block;
+        }
+        body{
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            height: 80px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            z-index: 1;
+        }
+
+        header img{
+            margin-top: 10px;
+            width: 150px;
+            height: 60px;
+            align-content: center;
+        }
+
+        a{
+            text-align: center;
+        }
+        a:link {
+            color: #e4002b;
+        }
+
+        a:visited {
+            color: #e4002b;
+        }
+
+        #logo{
+            width:65%;
+        }
+
+        #about{
+            margin-left: 100px;
+        }
+
+        #navi{
+            width: 35%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            background-color: #e4002b;
+            border-left: 3px solid black;
+        }
+
+        .navItem{
+            margin-right: 10%;
+            width: 65px;
+            height: 65px;
+        }
+
+        .naviHover{
+            margin-top: 10px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+            color: #5B6770;
+        }
+
+        .naviHover p{
+            font-size: 20px;
+            margin: auto;
+            margin-top: 15px;
+            align-content: center;
+        }
+
+        .navItem img{
+            width: 65px;
+            height: 65px;
+            border: none;
+        }
+
+        select {
+            overflow-y: auto;
+        }
+
+        #content{
+            position: relative;
+            top: 80px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #input img{
+            width: 250px;
+            height: 260px;
+            margin-left: 25px;
+            margin-top: 10px;
+            background: white;
+        }
+
+        #input{
+            top: 80px;
+            bottom: 0px;
+            width:65%;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        #output{
+            position: fixed;
+            overflow: auto;
+            top: 80px;
+            bottom: 0px;
+            right: 0;
+            width: 35%;
+            border-left: 3px solid black;
+            background-color: white;
+            background-image: url('hex-pattern-outline.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #5B6770;
+        }
+
+
+        .outerdiv{
+            margin-top: 50px;
+            margin-bottom: 70px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .innerdiv{
+            border-radius: 25px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 310px;
+            height: 450px;
+            color: black;
+            font-size: 20px;
+        }
+
+        .innerdiv .clickable{
+            border-radius: 25px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background: white;
+        }
+
+
+
+        .innerdiv .clickable:hover{
+            background: lightblue;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .innerdiv a{
+            border-radius: 25px;
+            background-color: white;
+            margin: auto;
+            color: #e4002b;
+            height: 40px;
+            width: 150px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        #infoText{
+            margin: auto;
+            margin-top: 10px;
+            font-size: 14px;            
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #input h1{
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 48px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        #input h2{
+            bottom: 0px;
+            font-size: 40px;
+        }
+
+        #input h4{
+            text-align: center;
+        }
+
+        .elementP{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #input section{
+            margin: auto;
+            margin-top: 70px;
+            display: none;
+            margin-bottom: 120px;
+        }
+
+        #output div{
+            margin-top: 35px;
+        }
+
+        #output h2{
+            margin-bottom: 30px;
+        }
+
+        table {
+            border: 1px solid black;
+            margin: auto;
+            background-color: #5B6770;
+            margin-bottom: 30px;
+            width: 90%;
+            border-collapse: collapse;
+            color: white;
+        }
+
+
+
+        #confirmDetails tr, td{
+            color: #5B6770;
+        }
+
+        td{
+            padding-bottom: 10px;
+        }
+
+        a{
+            color: lightblue;
+        }
+
+        #output th, td{
+            border: 1px solid black;
+        }
+
+        #outputSummaryTable tr, td{
+            border: 1px solid black;
+            color: white;
+        }
+
+        #outputTotalTable tr, td, th{
+            border: 1px solid black;
+        }
+
+        #outputTotalTable td{
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        #accumulatedTotal{
+            text-align: center;
+            color: #5B6770;
+        }
+
+        .loneElement{
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            width: 200px;
+            height: 160px;  
+            align-content: center;
+        }
+
+        .selectionBar{
+            font-size: 30px;
+            color: #5B6770;
+            width: 300px;
+            height: 150px;
+            align-content: center;
+        }
+
+        .dropListOptions{
+            font-size: 30px;
+            color: #5B6770;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .dropListOptions:hover{
+            background-color: #e4002b;
+            color: white;
+        }
+
+        #holeNumEl{
+            width: 300px;
+            margin-bottom: 0px;
+        }
+
+        #insertHoleNum{
+            margin-left: 35px;
+            width: 100%;
+            height: 80px;
+            font-size: 32px;
+        }
+
+        #submit{
+            align-content: center;
+        }
+
+
+        #submitButton{
+            margin-top: 20px;
+            margin-left: 45%;
+            width: 200px;
+            margin-bottom: 100px;
+            height: 60px;
+            border-radius: 25px;
+            background: #c8102e;
+            color:white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        #pastResults{
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #5B6770;
+        }
+
+        #pastResultsList{
+            width: 100%;
+            height: 70px;
+            background-color: #5B6770;
+            font-size: 13px;
+            color: white;
+        }
+        
+        .pastResultsListItem{
+            padding-top: 5px;
+        }
+
+        .pastResultsListItem:hover{
+            background-color: #e4002b;
+            color:white;
+        }
+
+
+        .popupButton{
+            margin-top: 30px;
+            color: #e4002b;
+            font-size: 30px;
+        }
+        .popupButton:hover{
+            cursor: pointer;
+        }
+
+        #productinfo{
+            display: flex;
+            flex-direction: row;
+        }
+        #productinfo a{
+            margin: auto;
+        }
+
+        #content #aboutPopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        #confirmSubmissionPopup{
+            top: 40px;
+            left: 350px;
+            width: 780px;
+            height: 550px;
+        }
+
+        #confirmSubmissionPopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        #confirmSubmissionPopup td{
+            padding: 10px;
+            color: #5B6770;
+        }
+
+        #confirmDetails{
+            margin-left: 10%;
+        }
+
+        #popupBackground{
+            display: none;
+            height: 2000px;
+            width: 350px;
+        }
+
+        #popupBackground img{
+            height: 400px;
+            width: 200px;
+            background-color: #ffcccc;
+            margin-left: 150px;
+        }
+
+        #jobDetailsPopup{
+            top: 0px;
+            left: 350px;
+            width: 850px;
+            height: 600px;
+        }
+
+        #jobDetailsPopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        #jobDetails{
+            padding-right: 10%;
+            padding-left: 10%;
+
+        }
+
+        #jobDetails td{
+            padding: 8px;
+            color: #5B6770;
+        }
+
+        #jobDelete{
+            margin-left: 35%;
+            margin-right: 35%;
+            width: 30%;
+            margin-top: 45px;
+            color: white;
+            background-color: #e4002b;
+
+        }
+
+        #jobDelete:hover{
+            color: #e4002b;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .popup{
+            visibility: hidden;
+            top: 40px;
+            left: 450px;
+            font-size: 25px;
+            background-color: #E6F1F1;
+            color: #5B6770;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            width: 550px;
+            height: 500px;
+        }
+
+        .popup h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .popup h2{
+            margin-top: 0px;
+        }
+
+        .popup li{
+            text-align: left;
+        }
+
+        .closeButton{
+            display: inline-block;
+            top: 5px;
+            margin-left:20%;
+            height: 35px;
+            margin-bottom: 0;
+            font-size: 30px;
+            color: #e4002b;
+            padding: 5px;
+            margin-left: 30%;
+        }
+
+        .closeButton:hover{
+            color: #5B6770;
+            cursor: pointer;
+        }
+
+        .topLinePopup{
+            display: flex;
+            flex-direction: row;
+            margin-left: 32%;
+        }
+
+        #jobTotalAmount{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #jobTotalPopup{
+            top: 100px;
+            left: 70%;
+            font-size: 30px;
+            width: 550px;
+            height: 425px;
+        }
+
+        #jobTotalPopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        #jobTotalPopup h1{
+            margin-left: 0;
+            text-align: center;
+        }
+
+        #totalDetails{
+            margin-top: 25px;
+        }
+
+        #confirmDeletePopup{
+            top: 40%;
+            left: 25%;
+            font-size: 30px;
+            border: 1px solid black; 
+            background-color: white;
+            color: black;
+            z-index: 2;
+            width: 350px;
+            height: 200px;
+            margin: auto;
+        }
+
+        #confirmDeletePopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        .confirmChoices{
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            bottom: 10px;
+        }
+
+        #confirmDetails{
+            margin-bottom: 40px;
+        }
+        .confirmChoice{
+            width: 10%;
+            height: 35px;
+            font-size: 30px;
+            color: #C8102E;
+            margin: auto;
+            bottom: 10px;
+
+        }
+
+        .confirmChoice:hover{
+            cursor: pointer;
+        }
+
+        #totalClose{
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+            width: 130px;
+            height: 50px;
+            font-size: 40px;
+            color: #e4002b;
+        }
+
+        #totalClose:hover{
+            color: #5B6770;;
+            cursor: pointer;
+        }
+
+        #confirmRefreshPopup{
+            top: 150px;
+            left: 80%;
+            font-size: 30px;
+            background-color: white;
+            color: #5B6770;
+            z-index: 2;
+            width: 350px;
+            height: 200px;
+            margin: auto;
+        }
+
+        #confirmRefreshPopup.show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        #totalNote{
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+
+
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+
+        /* Add animation (slide down new section) */
+        @-webkit-keyframes slideDown {
+            from {color: #e4002b;} 
+            to {color: white;}
+        }
+
+        @keyframes slideDown {
+            from {color: #e4002b;} 
+            to {color: white;}
+        }
+
+        footer{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            height: 40px;
+            background-color: grey;
+            color: white;
+        }
+
